@@ -24,6 +24,7 @@ class Editor extends ClassicEditor {
 	constructor () {
 		super();
 		const dp = new GFMDataProcessor(this.data.viewDocument);
+		dp.keepHtml( 'a' );
 		this.data.processor = dp;
 	}
 }
