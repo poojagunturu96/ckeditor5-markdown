@@ -13,7 +13,7 @@ import Indent from '@ckeditor/ckeditor5-indent/src/indent.js';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic.js';
 import Link from '@ckeditor/ckeditor5-link/src/link.js';
 import List from '@ckeditor/ckeditor5-list/src/list.js';
-import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown.js';
+// import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown.js';
 import GFMDataProcessor from '@ckeditor/ckeditor5-markdown-gfm/src/gfmdataprocessor';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph.js';
 import Table from '@ckeditor/ckeditor5-table/src/table.js';
@@ -21,10 +21,9 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation.js';
 
 class Editor extends ClassicEditor {
-	constructor() {
+	constructor () {
 		super();
-		const dp = new GFMDataProcessor( this.data.viewDocument );
-		dp.keepHtml( 'div' );
+		const dp = new GFMDataProcessor(this.data.viewDocument);
 		this.data.processor = dp;
 	}
 }
@@ -41,7 +40,7 @@ Editor.builtinPlugins = [
 	Italic,
 	Link,
 	List,
-	Markdown,
+	// Markdown,
 	Paragraph,
 	Table,
 	TableToolbar,
