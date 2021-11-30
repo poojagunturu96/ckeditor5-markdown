@@ -44,8 +44,12 @@ Editor.builtinPlugins = [
 
 // Editor configuration.
 Editor.defaultConfig = {
+	ui: {
+		viewportOffset: {
+			top: 66
+		}, 
+	},
 	toolbar: {
-		viewportTopOffset : 66, 
 		items: [
 			'heading',
 			'bold',
